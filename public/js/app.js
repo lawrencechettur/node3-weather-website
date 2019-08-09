@@ -7,13 +7,13 @@ const message3 = document.querySelector('#message-3')
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
     let location = search.value
+    message1.textContent = ''
+    message2.textContent = ''
+    message3.textContent = ''
     if(location === 'law'){
         location = 'Harihar'
         message3.textContent = 'Ancy...I Love You!!!'
     }
-    message1.textContent = ''
-    message2.textContent = ''
-    
     fetch('/weather?address=' + location).then((response) => {
     response.json().then((data) => {
         if (data.error) {
