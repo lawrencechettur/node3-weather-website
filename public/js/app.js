@@ -10,9 +10,13 @@ weatherForm.addEventListener('submit', (e) => {
     message1.textContent = ''
     message2.textContent = ''
     message3.textContent = ''
-    if(location === 'law'){
+    if(location.toLowerCase() === 'law'){
         location = 'Harihar'
-        message3.textContent = 'Ancy...I Love You!!!'
+        message3.textContent = 'Ancy...I Love You !!!'
+    }
+    if(location.toLowerCase() === 'ancy'){
+        location = 'Tirupati'
+        message3.textContent = 'Hi Law !!!'
     }
     fetch('/weather?address=' + location).then((response) => {
     response.json().then((data) => {
