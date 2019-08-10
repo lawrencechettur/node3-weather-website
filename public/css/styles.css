@@ -54,6 +54,11 @@ button {
     padding: 8px;
 }
 
-.ancy{
-    color: blue;
+.for-ancy {
+    color: royalblue;
+}
+
+.weather-report {
+    color: midnightblue;
+    font: verdana;
 }
